@@ -15,11 +15,13 @@ namespace Services {
         return this->ds;
     }
 
-    void gestionPersonnels::ajouterPersonne(String^ nom, String^ prenom)
+    void gestionPersonnels::ajouterPersonne(String^ nom, String^ prenom, String^date_naissance, String^ date_premier_achat)
     {
         int id;
         this->personne->setNom(nom);
         this->personne->setPrenom(prenom);
+        this->personne->setDate_naissance(date_naissance);
+        this->personne->setDate_premier_achat(date_premier_achat);
         id = this->cad->actionRowsID(this->personne->INSERT());
     }
 }

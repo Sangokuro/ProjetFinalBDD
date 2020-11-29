@@ -9,6 +9,8 @@ ref class map_personne
 		int ID;
 		String^ Nom;
 		String^ Prenom;
+		String^ Date_naissance;
+		String^ Date_premier_achat;
 	public:
 		map_personne(void);
 		String^ SELECT(void); 
@@ -16,7 +18,11 @@ ref class map_personne
 		void setID(int);
 		void setNom(String^);
 		void setPrenom(String^);
+		void setDate_naissance(String^);
+		void setDate_premier_achat(String^);
 		int getId(void);
 		String^ getNom(void);
 		String^ getPrenom(void);
+		String^ getDate_naissance(void);
+		String^ getDate_premier_achat(void);
 };

@@ -13,7 +13,7 @@ namespace Services {
 	public:
 		gestionPersonnels(void);
 		DataSet^ listePersonnes(String^);
-		void ajouterPersonne(String^, String^);
+		void ajouterPersonne(String^, String^, String^, String^);
 	};
 
 }
