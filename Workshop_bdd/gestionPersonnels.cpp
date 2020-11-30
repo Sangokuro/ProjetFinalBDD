@@ -25,22 +25,19 @@ namespace Services {
         id = this->cad->actionRowsID(this->personne->INSERT());
     }
 
-    void gestionPersonnels::modifierPersonne(String^ nom, String^ prenom, String^ date_naissance, String^ date_premier_achat)
+    void gestionPersonnels::modifierPersonne(int, String^ nom, String^ prenom, String^ date_naissance, String^ date_premier_achat)
     {
-        int id;
+        
         this->personne->setNom(nom);
         this->personne->setPrenom(prenom);
         this->personne->setDate_naissance(date_naissance);
         this->personne->setDate_premier_achat(date_premier_achat);
-        id = this->cad->actionRowsID(this->personne->UPDATE());
+        this->cad->actionRowsID(this->personne->UPDATE());
     }
 
-    void gestionPersonnels::supprimerPersonne(String^ nom, String^ prenom, String^ date_naissance, String^ date_premier_achat)
+    void gestionPersonnels::supprimerPersonne(int id_client)
     {
-        int id;
-        this->personne->setPrenom("");
-        this->personne->setDate_naissance("");
-        this->personne->setDate_premier_achat("");
-        id = this->cad->actionRowsID(this->personne->DELETE());
+        this->personne->setID(id_client);
+        this->cad->actionRowsID(this->personne->DELETE());
     }
 }

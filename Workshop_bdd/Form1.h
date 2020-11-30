@@ -47,6 +47,10 @@ namespace WorkShop {
 	private: System::Windows::Forms::TextBox^ textBox4;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button4;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::TextBox^ textBox5;
+
+
 		   Services::gestionPersonnels^ gestionPersonnels;
 
 #pragma region Windows Form Designer generated code
@@ -68,6 +72,8 @@ namespace WorkShop {
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -219,11 +225,30 @@ namespace WorkShop {
 			this->button4->UseVisualStyleBackColor = true;
 			this->button4->Click += gcnew System::EventHandler(this, &Form1::button4_Click);
 			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(13, 187);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(21, 17);
+			this->label5->TabIndex = 14;
+			this->label5->Text = L"ID";
+			// 
+			// textBox5
+			// 
+			this->textBox5->Location = System::Drawing::Point(96, 184);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(132, 22);
+			this->textBox5->TabIndex = 15;
+			this->textBox5->TextChanged += gcnew System::EventHandler(this, &Form1::textBox5_TextChanged_1);
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(820, 528);
+			this->Controls->Add(this->textBox5);
+			this->Controls->Add(this->label5);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->textBox4);
@@ -257,12 +282,12 @@ namespace WorkShop {
 		}
 
 		 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-			 gestionPersonnels->modifierPersonne(textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text);
+			 gestionPersonnels->modifierPersonne(Convert::ToInt32(textBox5->Text), textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text);
 			 loadDataGridView();
 			   }
 
 		private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-			gestionPersonnels->supprimerPersonne(textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text);
+			gestionPersonnels->supprimerPersonne(Convert::ToInt32(textBox5->Text));
 			loadDataGridView();
 				}
 		private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
@@ -283,5 +308,9 @@ private: System::Void textBox4_TextChanged(System::Object^ sender, System::Event
 }
 
 
+private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBox5_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
