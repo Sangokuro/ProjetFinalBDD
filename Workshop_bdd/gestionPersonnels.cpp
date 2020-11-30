@@ -24,4 +24,23 @@ namespace Services {
         this->personne->setDate_premier_achat(date_premier_achat);
         id = this->cad->actionRowsID(this->personne->INSERT());
     }
+
+    void gestionPersonnels::modifierPersonne(String^ nom, String^ prenom, String^ date_naissance, String^ date_premier_achat)
+    {
+        int id;
+        this->personne->setNom(nom);
+        this->personne->setPrenom(prenom);
+        this->personne->setDate_naissance(date_naissance);
+        this->personne->setDate_premier_achat(date_premier_achat);
+        id = this->cad->actionRowsID(this->personne->UPDATE());
+    }
+
+    void gestionPersonnels::supprimerPersonne(String^ nom, String^ prenom, String^ date_naissance, String^ date_premier_achat)
+    {
+        int id;
+        this->personne->setPrenom("");
+        this->personne->setDate_naissance("");
+        this->personne->setDate_premier_achat("");
+        id = this->cad->actionRowsID(this->personne->DELETE());
+    }
 }

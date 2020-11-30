@@ -12,6 +12,24 @@ String^ map_personne::SELECT(void)
 	return "SELECT * FROM dbo.Client";
 }
 
+String^ map_personne::UPDATE(void)
+{
+	return "UPDATE dbo.Client" + "SET nom ='" + this->getNom() + "',prenom='" + this->getPrenom() + "',date_naissance='" + this->getDate_naissance() + "',date_premier_achat='" + this->getDate_premier_achat() + "' "+ "WHERE(id_client = " + this->getId() + ");";
+}
+
+
+
+
+String^ map_personne::DELETE(void)
+{
+	return "DELETE FROM dbo.Client WHERE (id_client=" + this->getId() + ");";
+}
+
+
+
+
+
+
 String^ map_personne::INSERT(void) {
 	return "INSERT INTO dbo.Client " +
 		"(Nom, Prenom, Date_naissance, Date_premier_achat) " +

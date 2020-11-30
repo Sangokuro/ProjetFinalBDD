@@ -15,6 +15,8 @@ ref class map_personne
 		map_personne(void);
 		String^ SELECT(void); 
 		String^ INSERT(void);
+		String^ UPDATE(void);
+		String^ DELETE(void);
 		void setID(int);
 		void setNom(String^);
 		void setPrenom(String^);
