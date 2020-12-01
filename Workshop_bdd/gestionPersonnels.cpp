@@ -25,9 +25,9 @@ namespace Services {
         id = this->cad->actionRowsID(this->personne->INSERT());
     }
 
-    void gestionPersonnels::modifierPersonne(int, String^ nom, String^ prenom, String^ date_naissance, String^ date_premier_achat)
+    void gestionPersonnels::modifierPersonne(int id, String^ nom, String^ prenom, String^ date_naissance, String^ date_premier_achat)
     {
-        
+        this->personne->setID(id);
         this->personne->setNom(nom);
         this->personne->setPrenom(prenom);
         this->personne->setDate_naissance(date_naissance);

@@ -14,17 +14,16 @@ String^ map_personne::SELECT(void)
 
 String^ map_personne::UPDATE(void)
 {
-	return "UPDATE Client " +
-		"SET nom = '" + this->getNom() + "', prenom = '" + this->getPrenom() + "' " +
-		"WHERE id_client = " + ID + ";";
+	return "UPDATE dbo.Client " +
+		"SET nom = '" + this->getNom() + "', prenom = '" + this->getPrenom()+"', date_naissance = '" + this->getDate_naissance() + "', date_premier_achat ='" +this->getDate_premier_achat()+"' "+
+		"WHERE (id_client = " + this->getId() + ");";
 }
-
 
 
 
 String^ map_personne::DELETE(void)
 {
-	return "DELETE FROM dbo.Client WHERE id_client= "+ ID + " ";
+	return "DELETE FROM dbo.Client WHERE id_client= "+ this->getId() + " ";
 }
 
 
