@@ -32,23 +32,28 @@ namespace WorkShop {
 
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
-	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::TextBox^ Nom_txt;
+
 	private: System::Windows::Forms::Button^ button2;
 	protected:
 
 	private:
 		System::ComponentModel::Container ^components;
-	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::TextBox^ Prenom_txt;
+
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::TextBox^ textBox4;
+	private: System::Windows::Forms::TextBox^ Date_naissance_txt;
+	private: System::Windows::Forms::TextBox^ Date_premier_achat_txt;
+
+
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::TextBox^ textBox5;
+	private: System::Windows::Forms::TextBox^ ID_txt;
+
 
 
 		   Services::gestionPersonnels^ gestionPersonnels;
@@ -56,24 +61,24 @@ namespace WorkShop {
 #pragma region Windows Form Designer generated code
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->Nom_txt = (gcnew System::Windows::Forms::TextBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->Prenom_txt = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->Date_naissance_txt = (gcnew System::Windows::Forms::TextBox());
+			this->Date_premier_achat_txt = (gcnew System::Windows::Forms::TextBox());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->ID_txt = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -90,50 +95,50 @@ namespace WorkShop {
 			// 
 			// dataGridView1
 			// 
-			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::ControlText;
-			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->dataGridView1->DefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle5->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle5->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->dataGridView1->DefaultCellStyle = dataGridViewCellStyle5;
 			this->dataGridView1->Location = System::Drawing::Point(251, 15);
 			this->dataGridView1->Margin = System::Windows::Forms::Padding(4);
 			this->dataGridView1->Name = L"dataGridView1";
-			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle3->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle6->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle6->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle3->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dataGridView1->RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle6->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle6->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle6->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle6->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView1->RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->Size = System::Drawing::Size(525, 474);
 			this->dataGridView1->TabIndex = 2;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Form1::dataGridView1_CellContentClick);
 			// 
-			// textBox1
+			// Nom_txt
 			// 
-			this->textBox1->Location = System::Drawing::Point(96, 222);
-			this->textBox1->Margin = System::Windows::Forms::Padding(4);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(132, 22);
-			this->textBox1->TabIndex = 3;
-			this->textBox1->TextChanged += gcnew System::EventHandler(this, &Form1::textBox1_TextChanged);
+			this->Nom_txt->Location = System::Drawing::Point(96, 222);
+			this->Nom_txt->Margin = System::Windows::Forms::Padding(4);
+			this->Nom_txt->Name = L"Nom_txt";
+			this->Nom_txt->Size = System::Drawing::Size(132, 22);
+			this->Nom_txt->TabIndex = 3;
+			this->Nom_txt->TextChanged += gcnew System::EventHandler(this, &Form1::textBox1_TextChanged);
 			// 
 			// button2
 			// 
@@ -146,13 +151,13 @@ namespace WorkShop {
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &Form1::button2_Click);
 			// 
-			// textBox2
+			// Prenom_txt
 			// 
-			this->textBox2->Location = System::Drawing::Point(96, 272);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(133, 22);
-			this->textBox2->TabIndex = 5;
-			this->textBox2->TextChanged += gcnew System::EventHandler(this, &Form1::textBox2_TextChanged);
+			this->Prenom_txt->Location = System::Drawing::Point(96, 272);
+			this->Prenom_txt->Name = L"Prenom_txt";
+			this->Prenom_txt->Size = System::Drawing::Size(133, 22);
+			this->Prenom_txt->TabIndex = 5;
+			this->Prenom_txt->TextChanged += gcnew System::EventHandler(this, &Form1::textBox2_TextChanged);
 			// 
 			// label1
 			// 
@@ -190,21 +195,21 @@ namespace WorkShop {
 			this->label4->TabIndex = 9;
 			this->label4->Text = L"Date premier achat";
 			// 
-			// textBox3
+			// Date_naissance_txt
 			// 
-			this->textBox3->Location = System::Drawing::Point(153, 328);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(91, 22);
-			this->textBox3->TabIndex = 10;
-			this->textBox3->TextChanged += gcnew System::EventHandler(this, &Form1::textBox3_TextChanged);
+			this->Date_naissance_txt->Location = System::Drawing::Point(153, 328);
+			this->Date_naissance_txt->Name = L"Date_naissance_txt";
+			this->Date_naissance_txt->Size = System::Drawing::Size(91, 22);
+			this->Date_naissance_txt->TabIndex = 10;
+			this->Date_naissance_txt->TextChanged += gcnew System::EventHandler(this, &Form1::textBox3_TextChanged);
 			// 
-			// textBox4
+			// Date_premier_achat_txt
 			// 
-			this->textBox4->Location = System::Drawing::Point(153, 384);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(91, 22);
-			this->textBox4->TabIndex = 11;
-			this->textBox4->TextChanged += gcnew System::EventHandler(this, &Form1::textBox4_TextChanged);
+			this->Date_premier_achat_txt->Location = System::Drawing::Point(153, 384);
+			this->Date_premier_achat_txt->Name = L"Date_premier_achat_txt";
+			this->Date_premier_achat_txt->Size = System::Drawing::Size(91, 22);
+			this->Date_premier_achat_txt->TabIndex = 11;
+			this->Date_premier_achat_txt->TextChanged += gcnew System::EventHandler(this, &Form1::textBox4_TextChanged);
 			// 
 			// button3
 			// 
@@ -235,32 +240,32 @@ namespace WorkShop {
 			this->label5->TabIndex = 14;
 			this->label5->Text = L"ID";
 			// 
-			// textBox5
+			// ID_txt
 			// 
-			this->textBox5->Location = System::Drawing::Point(96, 184);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(132, 22);
-			this->textBox5->TabIndex = 15;
-			this->textBox5->TextChanged += gcnew System::EventHandler(this, &Form1::textBox5_TextChanged_1);
+			this->ID_txt->Location = System::Drawing::Point(96, 184);
+			this->ID_txt->Name = L"ID_txt";
+			this->ID_txt->Size = System::Drawing::Size(132, 22);
+			this->ID_txt->TabIndex = 15;
+			this->ID_txt->TextChanged += gcnew System::EventHandler(this, &Form1::textBox5_TextChanged_1);
 			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(820, 528);
-			this->Controls->Add(this->textBox5);
+			this->Controls->Add(this->ID_txt);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
-			this->Controls->Add(this->textBox4);
-			this->Controls->Add(this->textBox3);
+			this->Controls->Add(this->Date_premier_achat_txt);
+			this->Controls->Add(this->Date_naissance_txt);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->textBox2);
+			this->Controls->Add(this->Prenom_txt);
 			this->Controls->Add(this->button2);
-			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->Nom_txt);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->button1);
 			this->Margin = System::Windows::Forms::Padding(4);
@@ -278,17 +283,17 @@ namespace WorkShop {
 		}
 
 		private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-			gestionPersonnels->ajouterPersonne(textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text);
+			gestionPersonnels->ajouterPersonne(Nom_txt->Text, Prenom_txt->Text, Date_naissance_txt->Text, Date_premier_achat_txt->Text);
 			loadDataGridView();
 		}
 
 		 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-			 gestionPersonnels->modifierPersonne(Convert::ToInt32(textBox5->Text), textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text);
+			 gestionPersonnels->modifierPersonne(Convert::ToInt32(ID_txt->Text), Nom_txt->Text, Prenom_txt->Text, Date_naissance_txt->Text, Date_premier_achat_txt->Text);
 			 loadDataGridView();
 			   }
 
 		private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-			gestionPersonnels->supprimerPersonne(Convert::ToInt32(textBox5->Text));
+			gestionPersonnels->supprimerPersonne(Convert::ToInt32(ID_txt->Text));
 			loadDataGridView();
 				}
 		private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
@@ -298,6 +303,7 @@ namespace WorkShop {
 		private: void loadDataGridView() {
 			dataGridView1->DataSource = gestionPersonnels->listePersonnes("Client");
 			dataGridView1->DataMember = "Client";
+			
 		}
 private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }

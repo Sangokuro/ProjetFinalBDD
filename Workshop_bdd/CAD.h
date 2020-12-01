@@ -12,13 +12,17 @@ private:
     System::Data::SqlClient::SqlDataAdapter^ sqlDataAdapter;
     System::Data::SqlClient::SqlCommand^ sqlCommand;
     System::Data::DataSet^ dataSet;
+    SqlDataReader^ myReader;
     void setSQL(String^);
 
 public:
     CAD(void);
+    CAD(String^ requestSQL, int etape);
+    void initializeGetClient();
     int actionRowsID(String^);
     void actionRows(String^);
     DataSet^ getRows(String^, String^);
+    
        
 };
 
